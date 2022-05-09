@@ -17,7 +17,7 @@ app.use(cors()) //conseguimos falar exatamente quais endereços do front poderá
 app.use(express.json()); //comando executado primeiro e sempre!
 app.use(routes);
 
-app.listen(3333, () => {
+app.listen(process.env.PORT || 3333, () => {
   console.log('HTTP Server Running!');
 });
 
